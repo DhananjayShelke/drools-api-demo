@@ -1,0 +1,13 @@
+package org.drools.example 
+
+rule "Price Discount"
+    ruleflow-grou discount
+when
+    
+    $product : Product( name=='Shoes', price>1000 )   
+then
+$product.setDiscount(100);
+
+end
+
+
